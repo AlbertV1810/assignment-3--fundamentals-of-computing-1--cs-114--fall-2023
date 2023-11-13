@@ -6,14 +6,22 @@ public class RunMatrix {
     Scanner input = new Scanner(System.in);
     int arraySize = input.nextInt();
     int[][] inputMatrix = new int[arraySize][arraySize];
+    int row;
 
     System.out.println("Your matrix is " + arraySize + "x" + arraySize + "\n" );
     System.out.println("Printing your matrix with default values: " + "\n");
-    for(int row = 0; row < arraySize; row++){
+    for(row = 0; row < arraySize; row++){
       for(int column = 0; column < arraySize; column++){
         System.out.print(inputMatrix[row][column] + "\t");
       }
       System.out.println();
+    }
+    System.out.println();
+
+    System.out.println("Populating Matrix... ");
+    System.out.println("Printing populated Matrix: ");
+    for(int rowLimit = 1; rowLimit < arraySize + 1; rowLimit++){
+      System.out.print(rowLimit + "\t");
     }
     System.out.println();
 
