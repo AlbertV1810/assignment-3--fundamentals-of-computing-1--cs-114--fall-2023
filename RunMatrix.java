@@ -7,12 +7,13 @@ public class RunMatrix {
     int arraySize = input.nextInt();
     int[][] inputMatrix = new int[arraySize][arraySize];
     int row;
+    int column;
 
     System.out.println("Your matrix is " + arraySize + "x" + arraySize + "\n" );
     System.out.println("Printing your matrix with default values: " + "\n");
     for(row = 0; row < arraySize; row++){
-      for(int column = 0; column < arraySize; column++){
-        System.out.print("0" + "\t");
+      for(column = 0; column < arraySize; column++){
+        System.out.print(inputMatrix[row][column] + "\t");
       }
       System.out.println();
     }
