@@ -8,10 +8,11 @@ public class RunMatrix {
     int[][] inputMatrix = new int[arraySize][arraySize];
     int row;
     int column;
+    int matrixValue = 1;
 
     System.out.println("Your matrix is " + arraySize + "x" + arraySize + "\n" );
     System.out.println("Printing your matrix with default values: " + "\n");
-    for(row = 0; row < arraySize; row++){
+    for(row = 0; row < arraySize; row++){ //Prints non populated matrix
       for(column = 0; column < arraySize; column++){
         System.out.print(inputMatrix[row][column] + "\t");
       }
@@ -21,12 +22,15 @@ public class RunMatrix {
 
     System.out.println("Populating Matrix... ");
     System.out.println("Printing populated Matrix: ");
-    for(int rowLimit = 1; rowLimit < (arraySize*arraySize) + 1; rowLimit++){
-        System.out.print(rowLimit + "\t");
-        if(rowLimit % arraySize == 0){
-          System.out.println();
+    for(row = 0; row < arraySize; row++){ //Prints populated matrix
+      for(column = 0; column < arraySize; column++){
+        inputMatrix[row][column] = matrixValue++; //Gives a value to each place in the matrix
+        System.out.print(inputMatrix[row][column] + "\t");
         }
-        }
+       System.out.println();
+    }
+    System.out.println();
+
     input.close();
     }
 
