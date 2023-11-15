@@ -33,6 +33,25 @@ public class RunMatrix {
 
     input.close();
     }
+    public static void printMatrix(){
+    System.out.print("Please enter a positive number for the size of your matrix: ");
+    Scanner input = new Scanner(System.in);
+    int arraySize = input.nextInt();
+    int[][] inputMatrix = new int[arraySize][arraySize];
+    int row;
+    int column;
+    int matrixValue = 1;
+
+    System.out.println("Your matrix is " + arraySize + "x" + arraySize + "\n" );
+    System.out.println("Printing your matrix with default values: " + "\n");
+    for(row = 0; row < arraySize; row++){ //Prints non populated matrix
+      for(column = 0; column < arraySize; column++){
+        System.out.print(inputMatrix[row][column] + "\t");
+      }
+      System.out.println();
+    }
+    System.out.println();
+    }
 
 
 
