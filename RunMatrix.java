@@ -12,7 +12,7 @@ public class RunMatrix {
     System.out.println("Printing your matrix with default values: " + "\n");
     for(row = 0; row < arraySize; row++){
       for(int column = 0; column < arraySize; column++){
-        System.out.print(inputMatrix[row][column] + "\t");
+        System.out.print("0" + "\t");
       }
       System.out.println();
     }
@@ -20,10 +20,13 @@ public class RunMatrix {
 
     System.out.println("Populating Matrix... ");
     System.out.println("Printing populated Matrix: ");
-    for(int rowLimit = 1; rowLimit < arraySize + 1; rowLimit++){
-      System.out.print(rowLimit + "\t");
+    for(int rowLimit = 1; rowLimit < (arraySize*arraySize) + 1; rowLimit++){
+        System.out.print(rowLimit + "\t");
+        if(rowLimit==arraySize){
+          System.out.println();
+        }
     }
-    System.out.println();
+
 
     input.close();
   }
