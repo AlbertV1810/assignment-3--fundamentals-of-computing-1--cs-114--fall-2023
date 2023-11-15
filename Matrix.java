@@ -6,8 +6,12 @@ public class Matrix {
   static int row, column;
   static int matrixValue = 1;
 
-  public static void printMatrix(){
+  private static void swap(){
 
+
+  }
+
+  public static void printMatrix(){
     System.out.println("Your matrix is " + arraySize + "x" + arraySize + "\n" );
     System.out.println("Printing your matrix with default values: " + "\n");
     for(row = 0; row < arraySize; row++){ //Prints non populated matrix
@@ -18,6 +22,7 @@ public class Matrix {
     }
     input.close();
   }
+
   public static void populateMatrix(){
     System.out.println("Populating Matrix... ");
     System.out.println("Printing populated Matrix: ");
@@ -29,5 +34,8 @@ public class Matrix {
        System.out.println();
     }
     System.out.println();
+  }
+  public static void flipMatrix(){
+
   }
 }

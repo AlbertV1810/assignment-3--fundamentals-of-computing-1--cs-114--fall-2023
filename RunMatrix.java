@@ -3,5 +3,6 @@ public class RunMatrix {
     System.out.print("Please enter a positive number for the size of your matrix: ");
     Matrix.printMatrix();
     Matrix.populateMatrix();
+
   }
 }
