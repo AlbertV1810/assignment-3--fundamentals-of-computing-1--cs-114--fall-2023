@@ -23,12 +23,13 @@ public class RunMatrix {
     System.out.println("Printing populated Matrix: ");
     for(int rowLimit = 1; rowLimit < (arraySize*arraySize) + 1; rowLimit++){
         System.out.print(rowLimit + "\t");
-        if(rowLimit==arraySize){
+        if(rowLimit % arraySize == 0){
           System.out.println();
         }
+        }
+    input.close();
     }
 
 
-    input.close();
+
   }
-}
