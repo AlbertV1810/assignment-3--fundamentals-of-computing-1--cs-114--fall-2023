@@ -1,19 +1,12 @@
 import java.util.Scanner;
 public class Matrix {
-  Scanner input = new Scanner(System.in);
-  int arraySize = input.nextInt();
-  int[][] inputMatrix = new int[arraySize][arraySize];
-  int row;
-  int column;
-  int matrixValue = 1;
+  static Scanner input = new Scanner(System.in);
+  static int arraySize = input.nextInt();
+  static int[][] inputMatrix = new int[arraySize][arraySize];
+  static int row, column;
+  static int matrixValue = 1;
 
   public static void printMatrix(){
-    System.out.print("Please enter a positive number for the size of your matrix: ");
-    Scanner input = new Scanner(System.in);
-    int arraySize = input.nextInt();
-    int[][] inputMatrix = new int[arraySize][arraySize];
-    int row;
-    int column;
 
     System.out.println("Your matrix is " + arraySize + "x" + arraySize + "\n" );
     System.out.println("Printing your matrix with default values: " + "\n");
@@ -25,7 +18,7 @@ public class Matrix {
     }
     input.close();
   }
-  public void populateMatrix(){
+  public static void populateMatrix(){
     System.out.println("Populating Matrix... ");
     System.out.println("Printing populated Matrix: ");
     for(row = 0; row < arraySize; row++){ //Prints populated matrix
@@ -36,6 +29,5 @@ public class Matrix {
        System.out.println();
     }
     System.out.println();
-    input.close();
   }
 }
