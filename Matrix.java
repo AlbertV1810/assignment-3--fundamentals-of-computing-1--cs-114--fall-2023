@@ -38,12 +38,13 @@ public class Matrix {
     }
     System.out.println();
   }
-  public static void flippedMatrix(){
-  int [][] flippedMatrix = new int[arraySize][arraySize];
-  for (int row = 0; row < arraySize; row++) {
-    for (int column = 0; column < arraySize; column++) {
-      flippedMatrix[row][column] = inputMatrix[row][column];
+  public static void flipMatrix(){
+    for (int row = 0; row < arraySize; row++) {
+      for (int column = 0; column < arraySize; column++) {
+        Matrix.swap();
+        System.out.print(inputMatrix[x1][y1] + "\t");
       }
-  }
+      System.out.println();
+    }
   }
 }
