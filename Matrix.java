@@ -18,6 +18,7 @@ public class Matrix {
     input.close();
   }
   public static final String ANSI_YELLOW = "\u001B[33m";
+  public static final String ANSI_RESET = "\u001B[0m";
 
   public static void populateMatrix(){
     System.out.println("Populating Matrix... ");
@@ -25,15 +26,16 @@ public class Matrix {
     for(row = 0; row < arraySize; row++){ //Prints populated matrix
       for(column = 0; column < arraySize; column++){
         inputMatrix[row][column] = matrixValue++; //Gives a value to each place in the matrix
-        System.out.print(ANSI_YELLOW + inputMatrix[row][column] + "\t");
+        System.out.print(ANSI_YELLOW + inputMatrix[row][column] + "\t" + ANSI_RESET);
         }
        System.out.println();
     }
     System.out.println();
   }
   public static void swap(){
-    inputMatrix[row][column] = ;
-    inputMatrix[rowOne][columnOne] = ;
+    hold = inputMatrix[rowTwo][columnTwo];
+    inputMatrix[rowTwo][columnTwo] = inputMatrix[rowOne][columnOne];
+    inputMatrix[rowOne][columnOne] = inputMatrix[rowTwo][columnTwo];
 
   }
 }
