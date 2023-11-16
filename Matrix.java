@@ -3,7 +3,7 @@ public class Matrix {
   static Scanner input = new Scanner(System.in);
   static int arraySize = input.nextInt();
   static int[][] inputMatrix = new int[arraySize][arraySize];
-  static int row, column, x1, y1, x2, y2;
+  static int row, column, rowTwo, columnTwo;
   static int matrixValue = 1;
 
   public static final String ANSI_YELLOW = "\u001B[33m";
@@ -21,9 +21,9 @@ public class Matrix {
   }
 
   private static void swap() {
-    int hold = inputMatrix[x1][y1];
-    inputMatrix[x1][y1] = inputMatrix[x2][y2];
-    inputMatrix[x2][y2] = hold;
+    int hold = inputMatrix[row][column];
+    inputMatrix[row][column] = inputMatrix[rowTwo][columnTwo];
+    inputMatrix[rowTwo][columnTwo] = hold;
   }
 
   public static void populateMatrix(){
@@ -39,10 +39,9 @@ public class Matrix {
     System.out.println();
   }
   public static void flipMatrix(){
-    for (int row = 0; row < arraySize; row++) {
-      for (int column = 0; column < arraySize; column++) {
-        Matrix.swap();
-        System.out.print(inputMatrix[x1][y1] + "\t");
+    for (int row = arraySize - 1; row > 0; row--) {
+      for (int column = arraySize - 1; column < arraySize; column--) {
+        System.out.print(inputMatrix[row][column] + "\t");
       }
       System.out.println();
     }
